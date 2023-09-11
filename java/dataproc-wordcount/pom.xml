@@ -89,7 +89,7 @@
           </descriptorRefs>
           <archive>
             <manifest>
-                <mainClass>com.example.bigtable.sample.WordCountDriver</mainClass>
+                <mainClass>com.example.bigtable.sample.DictionaryDriver</mainClass>
             </manifest>
           </archive>
         </configuration>
