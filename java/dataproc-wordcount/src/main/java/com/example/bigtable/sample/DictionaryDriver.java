@@ -12,7 +12,6 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 import java.io.IOException;
-import java.util.StringTokenizer;
 
 public class DictionaryDriver {
 
@@ -24,6 +23,7 @@ public class DictionaryDriver {
 
     public void map(Object key, Text value, Context context
     ) throws IOException, InterruptedException {
+      System.out.println(key + " - " + value);
       char[] charArray = value.toString().toLowerCase().toCharArray();
       for (char charSingle: charArray) {
         word.set(String.valueOf(charSingle));
